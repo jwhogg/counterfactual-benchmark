@@ -1,4 +1,17 @@
 
+## Benchmarking Steps:
+Steps:
+1. For each variable in the graph, train its model (flow, gan, vae)
+	1. pass the `torch...Dataset` class with the (mnist, celeba...) dataset to the PyTorch Trainer
+	2. use trainer.fit() to fit your model
+2. Train the classifier(s) for your dataset
+	1. For each attribute in the graph, train a classifier to predict the value of that attribute
+3. Evaluate
+	1. For each dataset, run the DeepSCM with your chosen model by doing the 3 steps of counterfactual estimation
+		1. abduction- for each variable in the graph, calculate the abducted exogenous noise by inversing the model (encode function)
+		2. Action and Prediction- for each variable, feed the noise into the prediction model (decode)
+	2. Feed the resulting image(s) into the relevant classifier for that attribute, and compare the error vs the actual intervention amount
+ 3. 
 <img width="2322" height="3764" alt="Understanding DeepSCM" src="https://github.com/user-attachments/assets/f9e5c5be-8903-4277-8055-0fc7df128ad9" />
 
 # Benchmarking Counterfactual Image Generation
