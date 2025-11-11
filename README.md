@@ -1,3 +1,6 @@
+
+<img width="2322" height="3764" alt="Understanding DeepSCM" src="https://github.com/user-attachments/assets/f9e5c5be-8903-4277-8055-0fc7df128ad9" />
+
 # Benchmarking Counterfactual Image Generation
 ![image](https://github.com/gulnazaki/counterfactual-benchmark/assets/57211914/966b0d1f-3a3d-47c2-a77e-d32cf01d2868)
 
