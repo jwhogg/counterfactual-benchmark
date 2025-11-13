@@ -1,3 +1,7 @@
+#datasets
+./counterfactual-benchmark/datasets/celeba/data/img_align_celeba
+*.jpg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
