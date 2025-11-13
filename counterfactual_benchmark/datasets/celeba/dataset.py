@@ -9,7 +9,7 @@ MIN_MAX = {
 
 def load_data(data_dir, split):
     transforms = Compose([CenterCrop(150), Resize((64, 64)), ToTensor(), ConvertImageDtype(dtype=torch.float32),])
-    data = CelebA(root=data_dir, split=split, transform=transforms, download=False)
+    data = CelebA(root=data_dir, split=split, transform=transforms, download=True)
     return data
 
 def unnormalize(value, name):
