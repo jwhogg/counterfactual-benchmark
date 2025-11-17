@@ -22,6 +22,7 @@ class CelebaClassifier(pl.LightningModule):
         self.accociations = {"Smiling":None, "Eyeglasses":None}
         self.conditions = self.accociations[attr]
         #self.attr = self.variables[attr] #select attribute
+        self.attr = attr
         in_channels = in_shape[0]
 
         self.num_outputs = num_outputs

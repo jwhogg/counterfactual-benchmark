@@ -66,7 +66,7 @@ class Encoder(nn.Module):
 
 
 class Decoder(nn.Module):
-    def __init__(self, latent_dim, num_continuous, n_chan=[512 ,512, 256, 256, 128, 64, 3], stride=[1, 2, 2, 2, 1, 1],
+    def __init__(self, latent_dim, num_continuous, n_chan=[512, 512, 256, 256, 128, 64, 3], stride=[1, 2, 2, 2, 1, 1],
                  kernel_size=[4, 7, 5, 7, 2, 1], padding=[0, 0, 0, 0, 0, 0]):
         super().__init__()
 
