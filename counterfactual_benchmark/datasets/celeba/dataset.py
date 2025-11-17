@@ -9,7 +9,7 @@ MIN_MAX = {
 
 def load_data(data_dir, split):
     transforms = Compose([CenterCrop(150), Resize((64, 64)), ToTensor(), ConvertImageDtype(dtype=torch.float32),])
-    data = CelebA(root=data_dir, split=split, transform=transforms, download=True)
+    data = CelebA(root=data_dir, split=split, transform=transforms, download=False)
     return data
 
 def unnormalize(value, name):
@@ -19,7 +19,7 @@ def unnormalize(value, name):
 
 class Celeba(Dataset):
     def __init__(self, attribute_size, split='train', normalize_=True,
-                 transform=None, transform_cls=None, data_dir='./data/'):
+                 transform=None, transform_cls=None, data_dir="data"):
         super().__init__()
         self.has_valid_set = True
         self.transform = transform

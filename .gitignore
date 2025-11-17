@@ -1,5 +1,6 @@
 #datasets
 ./counterfactual-benchmark/datasets/celeba/data/img_align_celeba
+counterfactual_benchmark/datasets/celeba/data  
 *.jpg
 
 # Byte-compiled / optimized / DLL files
