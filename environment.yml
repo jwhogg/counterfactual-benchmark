@@ -4,20 +4,20 @@ channels:
 dependencies:
   - python=3.10
 
-  # Core numerical & scientific stack
+  # Core scientific stack
   - numpy
   - pandas
   - scipy
   - matplotlib
   - scikit-learn
 
-  # Jupyter + IPython stack
+  # Jupyter/IPython ecosystem
   - ipykernel
   - ipython
   - jupyter_client
   - jupyter_core
-  - pygments
   - traitlets
+  - pygments
   - tornado
   - pyzmq
 
@@ -36,7 +36,7 @@ dependencies:
   - soupsieve
   - urllib3
 
-  # Utilities
+  # Utility libraries
   - filelock
   - joblib
   - packaging
@@ -49,29 +49,25 @@ dependencies:
   - pyyaml
   - networkx
 
-  # Plotting stack
+  # Plot libs
   - contourpy
-  - fonttools
   - cycler
+  - fonttools
   - kiwisolver
   - matplotlib-inline
 
-  # Lightning + metrics
-  - pytorch-lightning
-  - torchmetrics
-
-  # ***** CORRECT PYTORCH FOR H100 + CUDA 12.4 *****
+  # Deep learning stack (HPC-friendly)
   - pytorch
-  - pytorch-cuda=12.4
   - torchvision
+  - torchmetrics
+  - pytorch-lightning
 
-  # Additional libs
+  # Additional libraries
+  - mpmath
+  - sympy
   - nest-asyncio
-  - stack-data
   - asttokens
   - executing
-  - sympy
-  - mpmath
   - platformdirs
   - prompt_toolkit
   - comm
@@ -79,12 +75,4 @@ dependencies:
   - jinja2
   - parso
   - jedi
-  - six
-  - wcwidth
-
-  # Allow pip installs
-  - pip
-
-  - pip:
-      - gdown
-      - propcache
+  - si
