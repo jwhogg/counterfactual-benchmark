@@ -1,4 +1,4 @@
-name: cf-env
+name: counterfactual-benchmark
 channels:
   - conda-forge
 dependencies:
