@@ -1,0 +1,90 @@
+name: cf-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+
+  # Core numerical & scientific stack
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - scikit-learn
+
+  # Jupyter + IPython stack
+  - ipykernel
+  - ipython
+  - jupyter_client
+  - jupyter_core
+  - pygments
+  - traitlets
+  - tornado
+  - pyzmq
+
+  # Async + networking
+  - aiohappyeyeballs
+  - aiohttp
+  - aiosignal
+  - async-timeout
+  - attrs
+  - beautifulsoup4
+  - requests
+  - charset-normalizer
+  - frozenlist
+  - idna
+  - yarl
+  - soupsieve
+  - urllib3
+
+  # Utilities
+  - filelock
+  - joblib
+  - packaging
+  - pillow
+  - psutil
+  - tqdm
+  - python-dateutil
+  - pytz
+  - tzdata
+  - pyyaml
+  - networkx
+
+  # Plotting stack
+  - contourpy
+  - fonttools
+  - cycler
+  - kiwisolver
+  - matplotlib-inline
+
+  # Lightning + metrics
+  - pytorch-lightning
+  - torchmetrics
+
+  # ***** CORRECT PYTORCH FOR H100 + CUDA 12.4 *****
+  - pytorch
+  - pytorch-cuda=12.4
+  - torchvision
+
+  # Additional libs
+  - nest-asyncio
+  - stack-data
+  - asttokens
+  - executing
+  - sympy
+  - mpmath
+  - platformdirs
+  - prompt_toolkit
+  - comm
+  - markupsafe
+  - jinja2
+  - parso
+  - jedi
+  - six
+  - wcwidth
+
+  # Allow pip installs
+  - pip
+
+  - pip:
+      - gdown
+      - propcache
