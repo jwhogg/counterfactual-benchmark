@@ -101,16 +101,19 @@ attribute_size = {
         "Eyeglasses": 1
          }
 
-for variable in causal_graph:
-    if variable not in mechanism_models: continue #only want to train variables with models, root variables don't have a causal mechanism
-    print("training...")
-    train_gan(
-        gan=CelebaCondGAN(params=mechanism_models[variable]["params"], attr_size=config_cls["attribute_size"]),
-        config=mechanism_models[variable]["params"],
-        data_class=Celeba,
-        graph_structure=causal_graph,
-        attribute_size=attribute_size,
-        checkpoint_dir='methods\deepscm\checkpoints\celeba\simple/trained_scm' #adjusted default path because the notebook is down one
-        )
+if __name__ == "__main__":
+    print("Begining training process")
 
-print('done!')
+    for variable in causal_graph:
+        if variable not in mechanism_models: continue #only want to train variables with models, root variables don't have a causal mechanism
+        print("training...")
+        train_gan(
+            gan=CelebaCondGAN(params=mechanism_models[variable]["params"], attr_size=config_cls["attribute_size"]),
+            config=mechanism_models[variable]["params"],
+            data_class=Celeba,
+            graph_structure=causal_graph,
+            attribute_size=attribute_size,
+            checkpoint_dir='methods\deepscm\checkpoints\celeba\simple/trained_scm' #adjusted default path because the notebook is down one
+            )
+
+    print('done!')
